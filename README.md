@@ -1,3 +1,5 @@
+![logo411](https://user-images.githubusercontent.com/49658988/127822419-c79450e1-9066-4f5c-a69a-f551e1cb944f.png)
+
 # Frontend code template
 
 This template to be used for frontend applications. Written in Vue.js with Vuetify and Vuex set up it is ready to be used. Facebook. Google and Telegram login is included.
