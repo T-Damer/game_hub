@@ -64,6 +64,15 @@ export default class Navbar extends Vue {
 </script>
 
 <style>
+:root {
+  --nav-height: 4rem;
+}
+
+header {
+  border-radius: 10px 10px 0px 0px !important;
+  margin-top: var(--nav-height);
+}
+
 nav a:link {
   text-decoration: none;
 }

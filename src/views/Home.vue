@@ -5,43 +5,58 @@
     v-flex.pt-4
       .card__container
         Navbar
-        .card-light
-          .game__logo
-            img(src='img/games/SPIDER-MAN.jpg', width='100')
-          span {{ "Spider-Man" }}
+        h1 {{ $t("Active Games") }}
+        .seacrh__box
+          span {{ $t("Search") }}
+        .game__container
+          .game__box
+            img(src='img/games/SPIDER-MAN.png')
+            .game__info
+              span Spider-Man
+              .game__progress
+          .game__box
+            img(src='img/games/ACRE.png')
+            .game__info
+              span Assassins creed
+              .game__progress
+          .game__box
+            img(src='img/games/STALKER.png')
+            .game__info
+              span S.T.A.L.K.E.R. Call of Pripyat
+              .game__progress
+        .game__container
+          h2 Game News
+          .news__box
+            .news_publisher
+              img(src='img/publishers/publisher-logo1.png')
+              span S.T.A.L.K.E.R. 2 Gameplay footage
+            .divider__horizontal
+            .news__content
+              p An in-engine first-person look at S.T.A.L.K.E.R. 2. Meet the new protagonist called Skif. \thttps://www.xbox.com/games/stalker-2
 
-        .card-light
-          .game__logo
-            img(src='img/games/ACRE.jpg', width='100')
-          span {{ "Assassins creed" }}
-        .card-light
-          .game__logo
-            img(src='img/games/STALKER.jpg', width='100')
-          span {{ "S.T.A.L.K.E.R. Call of Pripyat" }}
+      //- v-flex.pt-4
+      //-   vue-telegram-login(
+      //-     mode='callback',
+      //-     telegram-login='mamkintrade_bot',
+      //-     @callback='onTelegramAuth',
+      //-     radius='3',
+      //-     :userpic='false'
+      //-   )
+      //-   g-signin-button(
+      //-     :params='{ client_id: googleClientId }',
+      //-     @success='onGoogleSignInSuccess',
+      //-     @error='onGoogleSignInError'
+      //-   ) {{ $t("home.google") }}
+      //-   fb-signin-button(
+      //-     :params='{ scope: "email", return_scopes: true }',
+      //-     @success='onFacebookSignInSuccess',
+      //-     @error='onFacebookSignInError'
+      //-   ) {{ $t("home.facebook") }}
+      //-   .vk-signin-button(@click.stop='vkDialog = true') {{ $t("home.vk") }}
+      //-   .api-signin-button(@click.stop='keyDialog = true') {{ $t("home.key") }}
 
-      v-flex.pt-4
-        vue-telegram-login(
-          mode='callback',
-          telegram-login='mamkintrade_bot',
-          @callback='onTelegramAuth',
-          radius='3',
-          :userpic='false'
-        )
-        g-signin-button(
-          :params='{ client_id: googleClientId }',
-          @success='onGoogleSignInSuccess',
-          @error='onGoogleSignInError'
-        ) {{ $t("home.google") }}
-        fb-signin-button(
-          :params='{ scope: "email", return_scopes: true }',
-          @success='onFacebookSignInSuccess',
-          @error='onFacebookSignInError'
-        ) {{ $t("home.facebook") }}
-        .vk-signin-button(@click.stop='vkDialog = true') {{ $t("home.vk") }}
-        .api-signin-button(@click.stop='keyDialog = true') {{ $t("home.key") }}
-
-      v-flex.pt-4
-        router-link(to='/privacy') {{ $t("home.privacy") }}
+      //- v-flex.pt-4
+      //-   router-link(to='/privacy') {{ $t("home.privacy") }}
 </template>
 
 <script lang="ts">
