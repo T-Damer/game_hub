@@ -3,7 +3,7 @@ nav
   v-app-bar(flat, app)
     // Title
     v-toolbar-title.text-uppercase.grey--text
-      span {{ $t("Game Hub") }}
+      span {{ $t("title") }}
     v-spacer
     // Dark mode
     v-btn(text, icon, color='grey', @click='toggleMode')
@@ -58,7 +58,7 @@ export default class Navbar extends Vue {
   changeLanguage(locale: string) {
     i18n.locale = locale
     this.setLanguage(locale)
-    document.title = i18n.t('strippedTitle') as string
+    document.title = i18n.t('title') as string // strippedTitle
   }
 }
 </script>

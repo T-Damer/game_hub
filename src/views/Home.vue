@@ -3,33 +3,50 @@
   // Main content
   v-layout.text-center(column, justify-center, align-center)
     v-flex.pt-4
-      vue-telegram-login(
-        mode='callback',
-        telegram-login='mamkintrade_bot',
-        @callback='onTelegramAuth',
-        radius='3',
-        :userpic='false'
-      )
-      g-signin-button(
-        :params='{ client_id: googleClientId }',
-        @success='onGoogleSignInSuccess',
-        @error='onGoogleSignInError'
-      ) {{ $t("home.google") }}
-      fb-signin-button(
-        :params='{ scope: "email", return_scopes: true }',
-        @success='onFacebookSignInSuccess',
-        @error='onFacebookSignInError'
-      ) {{ $t("home.facebook") }}
-      .vk-signin-button(@click.stop='vkDialog = true') {{ $t("home.vk") }}
-      .api-signin-button(@click.stop='keyDialog = true') {{ $t("home.key") }}
+      .card__container
+        Navbar
+        .card-light
+          .game__logo
+            img(src='img/games/SPIDER-MAN.jpg', width='100')
+          span {{ "Spider-Man" }}
 
-    v-flex.pt-4
-      .caption
+        .card-light
+          .game__logo
+            img(src='img/games/ACRE.jpg', width='100')
+          span {{ "Assassins creed" }}
+        .card-light
+          .game__logo
+            img(src='img/games/STALKER.jpg', width='100')
+          span {{ "S.T.A.L.K.E.R. Call of Pripyat" }}
+
+      v-flex.pt-4
+        vue-telegram-login(
+          mode='callback',
+          telegram-login='mamkintrade_bot',
+          @callback='onTelegramAuth',
+          radius='3',
+          :userpic='false'
+        )
+        g-signin-button(
+          :params='{ client_id: googleClientId }',
+          @success='onGoogleSignInSuccess',
+          @error='onGoogleSignInError'
+        ) {{ $t("home.google") }}
+        fb-signin-button(
+          :params='{ scope: "email", return_scopes: true }',
+          @success='onFacebookSignInSuccess',
+          @error='onFacebookSignInError'
+        ) {{ $t("home.facebook") }}
+        .vk-signin-button(@click.stop='vkDialog = true') {{ $t("home.vk") }}
+        .api-signin-button(@click.stop='keyDialog = true') {{ $t("home.key") }}
+
+      v-flex.pt-4
         router-link(to='/privacy') {{ $t("home.privacy") }}
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import Navbar from '@/components/Navbar.vue'
 import axios from 'axios'
 import { loginFacebook, loginTelegram, loginGoogle } from '@/utils/api'
 import Component from 'vue-class-component'
@@ -43,10 +60,10 @@ const SnackbarStore = namespace('SnackbarStore')
 
 // FB object is global, declaring here for TS
 declare const FB: any
-
 @Component({
   components: {
     vueTelegramLogin,
+    Navbar,
   },
 })
 export default class Home extends Vue {
