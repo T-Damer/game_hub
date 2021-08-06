@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { User } from '@/models/User'
 
-const base = 'https://template.com'
+const base = 'https://t-damer.github.io/game_hub/'
 
 export async function loginFacebook(accessToken: string) {
   return (

@@ -3,7 +3,7 @@ nav
   v-app-bar(flat, app)
     // Title
     v-toolbar-title.text-uppercase.grey--text
-      span {{ $t("title") }}
+      span {{ $t("Game Hub") }}
     v-spacer
     // Dark mode
     v-btn(text, icon, color='grey', @click='toggleMode')
