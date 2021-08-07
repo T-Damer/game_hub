@@ -128,7 +128,7 @@ a:hover {
   );
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(16px) saturate(180%);
-  border-radius: 12px;
+  border-radius: 30px;
 }
 
 .card__container h1 {
@@ -144,7 +144,7 @@ a:hover {
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
+  border-radius: 30px;
 }
 
 .game__box img {
@@ -172,7 +172,7 @@ a:hover {
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
+  border-radius: 30px;
 }
 
 .news__box img {
