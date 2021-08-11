@@ -12,27 +12,33 @@
           .game__box
             img(src='img/games/SPIDER-MAN.png')
             .game__info
-              span Spider-Man
+              span.game__title Spider-Man
+              span.game__version PS5 Version
               .game__progress
+            h2.game__percents 72%
           .game__box
             img(src='img/games/ACRE.png')
             .game__info
-              span Assassins creed
+              span.game__title Assassins creed
+              span.game__version PS4 Version
               .game__progress
+            h2.game__percents 60%
           .game__box
             img(src='img/games/STALKER.png')
             .game__info
-              span S.T.A.L.K.E.R. Call of Pripyat
+              span.game__title S.T.A.L.K.E.R. Call of Pripyat
+              span.game__version PC Version
               .game__progress
-        .game__container
+            h2.game__percents 100%
+        .news__container
           h2 Game News
           .news__box
-            .news_publisher
+            .news__publisher
               img(src='img/publishers/publisher-logo1.png')
-              span S.T.A.L.K.E.R. 2 Gameplay footage
+              span.news__title S.T.A.L.K.E.R. 2 Gameplay footage
             .divider__horizontal
             .news__content
-              p An in-engine first-person look at S.T.A.L.K.E.R. 2. Meet the new protagonist called Skif. \thttps://www.xbox.com/games/stalker-2
+              p.news__content An in-engine first-person look at S.T.A.L.K.E.R. 2. Meet the new protagonist called Skif. \thttps://www.xbox.com/games/stalker-2
 
       //- v-flex.pt-4
       //-   vue-telegram-login(
