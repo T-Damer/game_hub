@@ -7,6 +7,7 @@
         Navbar
         h1 {{ $t("Active Games") }}
         .seacrh__box
+          v-icon(small) magnify
           span {{ $t("Search") }}
         .game__container
           .game__box
