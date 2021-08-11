@@ -15,7 +15,7 @@
 :root {
   --body-font: 'Lato', sans-serif;
   --big-font-size: 3rem;
-  --medium-font-size: 1.2rem;
+  --medium-font-size: 1rem;
   --small-font-size: 0.815rem;
   --smaller-font-size: 0.75rem;
   --tiny-font-size: 0.625rem;
@@ -37,6 +37,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 span {
@@ -116,6 +117,14 @@ a:hover {
   color: var(--first-color);
 }
 
+.v-application--wrap {
+  background: radial-gradient(
+    50.12% 86.49% at 50.12% 46.54%,
+    #5ab8e1 61.81%,
+    #66dcca 100%
+  );
+}
+
 .special-link:hover {
   background-color: var(--first-color);
   transform: translateX(1s);
@@ -150,12 +159,10 @@ a:hover {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 30px;
 }
-
 .game__box img {
   border-radius: 50%;
   height: 6rem;
 }
-
 .game__info {
   display: flex;
   flex-grow: 1;
@@ -163,27 +170,29 @@ a:hover {
   margin-left: 0.5rem;
   justify-content: center;
 }
-
 .game__info span {
   color: var(--text-color);
-  align-self: flex-start;
+  text-align: left;
 }
-
 .game__version {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   font-size: var(--small-font-size);
   color: var(--text-color-light);
 }
-
 .game__progress {
   display: flex;
   height: 20%;
   background-color: var(--text-color-light);
   border-radius: 10px;
 }
-
 .game__percents {
   display: flex;
-  color: green;
+  background: -webkit-linear-gradient(#5188c0, #5bcaba);
+  font-weight: 900;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-left: 1rem;
   margin-right: 1rem;
   align-items: center;
