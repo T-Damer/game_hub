@@ -193,7 +193,7 @@ a:hover {
 .news__box {
   display: flex;
   flex-direction: column;
-  padding: 0.75rem;
+  padding: 1.5rem;
   margin: 0.5rem;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -201,7 +201,6 @@ a:hover {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 30px;
 }
-
 .news__box img {
   border-radius: 50%;
   width: 100px;
@@ -216,10 +215,12 @@ a:hover {
 }
 .news__title {
   color: var(--text-color);
+  font-weight: 900;
+  margin-left: 0.5rem;
 }
 .divider__horizontal {
   align-self: center;
-  width: 90%;
+  width: 100%;
   height: 0.25rem;
   background-color: #424242;
   border-radius: 10px;
@@ -227,6 +228,7 @@ a:hover {
 .news__content {
   color: var(--text-color);
   align-items: center;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   text-align: left;
 }
