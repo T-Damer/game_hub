@@ -1,10 +1,12 @@
 export const messages = {
   ru: {
-    title: 'Game Hub 🎮',
+    title: 'Игровой Хаб 🎮',
     notFound: 'Страница не найдена',
+    search: 'Поиск',
   },
   en: {
     title: 'Game Hub 🎮',
     notFound: 'Page not found',
+    search: 'Search',
   },
 }

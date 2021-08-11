@@ -2,12 +2,16 @@
 nav
   v-app-bar(flat, app)
     // Title
-    v-toolbar-title.text-uppercase.grey--text
-      span {{ $t("title") }}
+    v-toolbar-title
+      img.nav__logo(src='img/logo411.png')
     v-spacer
+    // Icons
+    v-icon(small) twitch
+    v-icon(small) account-group
+    v-icon(small) controller-classic
     // Dark mode
     v-btn(text, icon, color='grey', @click='toggleMode')
-      v-icon(small) brightness_2
+      v-icon(small) brightness-5
     // Language picker
     v-menu(offset-y)
       template(v-slot:activator='{ on }')
@@ -69,8 +73,14 @@ export default class Navbar extends Vue {
 }
 
 header {
+  position: sticky;
+  top: 0;
   border-radius: 10px 10px 0px 0px !important;
   margin-top: var(--nav-height);
+}
+
+.nav__logo {
+  height: 5rem;
 }
 
 nav a:link {

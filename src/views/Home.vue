@@ -39,6 +39,13 @@
             .divider__horizontal
             .news__content
               p.news__content An in-engine first-person look at S.T.A.L.K.E.R. 2. Meet the new protagonist called Skif. \thttps://www.xbox.com/games/stalker-2
+          .news__box
+            .news__publisher
+              img(src='img/publishers/publisher-logo1.png')
+              span.news__title S.T.A.L.K.E.R. 2 Gameplay footage
+            .divider__horizontal
+            .news__content
+              p.news__content An in-engine first-person look at S.T.A.L.K.E.R. 2. Meet the new protagonist called Skif. \thttps://www.xbox.com/games/stalker-2
 
       //- v-flex.pt-4
       //-   vue-telegram-login(
